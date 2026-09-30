@@ -1,0 +1,10 @@
+{
+  "name": "pocket-consultant",
+  "version": "0.1.0",
+  "description": "Skills y herramientas para trabajo de consultoría: formato de láminas, rigor analítico, storytelling ejecutivo, planes de trabajo en Smartsheet, preparación de check-ins y extracción de datos de Power BI.",
+  "author": {
+    "name": "Vicente Pareja"
+  },
+  "repository": "https://github.com/VicentePareja/pocket-consultant",
+  "keywords": ["consultoria", "powerpoint", "smartsheet", "storytelling", "power-bi", "rigor"]
+}

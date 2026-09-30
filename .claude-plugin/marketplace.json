@@ -1,0 +1,13 @@
+{
+  "name": "pocket-consultant",
+  "owner": {
+    "name": "Vicente Pareja"
+  },
+  "plugins": [
+    {
+      "name": "pocket-consultant",
+      "source": "./",
+      "description": "Skills de consultoría: láminas, rigor, storytelling, Smartsheet, check-ins y Power BI."
+    }
+  ]
+}

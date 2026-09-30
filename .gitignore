@@ -1,0 +1,9 @@
+.env
+*.env
+*.pptx
+*.xlsx
+*.pbix
+*.csv
+*.json.bak
+backup*/
+data/
