@@ -382,3 +382,19 @@ function Add-Tab($s, [string]$text){
   $tf = $r.TextFrame; $tf.Orientation = 2; $tf.MarginLeft = 0; $tf.MarginRight = 0
   $tr = $tf.TextRange; $tr.Text = $text; $tr.Font.Name = $script:FONT; $tr.Font.Size = 10; $tr.Font.Bold = -1; $tr.Font.Color.RGB = $script:WHITE; $tr.ParagraphFormat.Alignment = 2
 }
+
+# Borra placeholders vacíos de todas las láminas (en edición muestran "Haga clic para agregar..."). Llamar antes de guardar.
+function Remove-EmptyPlaceholders($pres){
+  $n = 0
+  foreach($s in $pres.Slides){
+    $del = @()
+    foreach($sh in $s.Shapes){
+      $pt = $null; try { $pt = $sh.PlaceholderFormat.Type } catch {}
+      if($pt -eq $null -or $pt -in 13,15,16){ continue }
+      if($sh.HasTextFrame){ if($sh.TextFrame.TextRange.Text.Trim() -eq ''){ $del += $sh } }
+      elseif(-not ($sh.HasChart -or $sh.HasTable)){ try { if($sh.PlaceholderFormat.ContainedType -eq 1){ $del += $sh } } catch {} }
+    }
+    foreach($sh in $del){ $sh.Delete(); $n++ }
+  }
+  return $n
+}
