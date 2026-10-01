@@ -13,6 +13,13 @@ El check-in sirve para **destrabar y validar**, no para mostrar todo lo hecho. E
 2. **Cierra lo que puedes cerrar solo:** tareas a medio terminar que no dependen de nadie. Verifica que ningún "bloqueo" sea en realidad falta de una herramienta.
 3. **Pon el plan de trabajo al día** (skill `plan-de-trabajo-smartsheet`): estados honestos, número clave y respaldo en cada fila, adjuntos en su versión vigente.
 4. **Prepara el material:** el capítulo propio (láminas) y su Excel de respaldo.
+5. **Estudia los fundamentals del cliente**, aunque tu frente sea uno solo. Arma un one pager (un HTML local basta) con:
+   - **Resultados:** ventas totales y su variación, margen bruto y operacional, y el estado de resultados resumido con fuente y periodo.
+   - **Negocio:** mix por negocio o canal con el margen de cada uno, principales mercados y categorías, número de SKUs y su concentración.
+   - **Estructura:** plantas, volumen, dotación, compras y los órdenes de magnitud (cuánto pesa tu frente sobre las ventas).
+   - **Cierre:** un glosario y las diferencias entre bases (contable vs comercial).
+
+   No llegues sin saber cuánto vende el cliente ni cuánto gana.
 
 ## Agenda (15 a 20 minutos)
 1. **Qué muestro:** 3 hallazgos del frente, con su número.
@@ -22,7 +29,7 @@ El check-in sirve para **destrabar y validar**, no para mostrar todo lo hecho. E
 5. **Próximos pasos** con fecha.
 
 ## Preguntas para el senior
-- Una pregunta = una decisión que él puede tomar ("¿presentamos el indicador sobre base A, B o ambas?").
+- Una pregunta = una decisión que el senior puede tomar ("¿presentamos el indicador sobre base A, B o ambas?").
 - Ofrece tu recomendación junto con la pregunta.
 - Incluye las diferencias con el material anterior y pregunta cómo comunicarlas.
 

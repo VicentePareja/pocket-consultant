@@ -28,10 +28,15 @@ Cada número presentado sale de la **data cruda del cliente** y se puede reprodu
 - **Periodos no comparables:** acumulado a septiembre vs año completo. Anualiza con criterio explícito (× 12/9) o compara el mismo periodo.
 - **Codificación de texto:** una comparación con tildes que falla en silencio deja fuera registros. Cuadra los totales contra otra fuente.
 - **No sumar peras con manzanas:** separa ahorro recurrente ($/año), caja por única vez, riesgos y oportunidades con inversión. Evita el doble conteo entre frentes.
+- **Redistribución entre unidades:** antes de decir que una unidad "crece" (una línea, una planta), revisa el total. A veces solo absorbió lo que otra dejó de hacer.
+- **Efecto mezcla:** un promedio por evento puede subir solo porque cambió la mezcla de tipos. Compara el mismo tipo de evento entre años.
+- **Valores estándar en registros manuales:** si muchas duraciones se repiten exactas (13 o 30 minutos), parte son tiempos estándar y no mediciones. Dilo en la nota y propone medir antes de fijar metas.
+- **Cifras parecidas con distinta base:** "la planta" y "sus líneas" no son lo mismo. Define el perímetro y usa uno solo en la lámina.
 
 ## Cuantificar
 - Todo hallazgo importante termina en horas, unidades o $/año, con **rango** (mínimo–máximo) y **factibilidad**.
 - Un techo teórico se presenta como techo, con la captura prudente al lado.
+- Un escenario se verifica **unidad por unidad**, no solo en el total. Si una unidad no cumple la condición, agrega la palanca que falta (por ejemplo, mover volumen a otra línea que ya ha hecho esos productos) y muéstralo.
 
 ## ¿Es realmente un bloqueo?
 Antes de marcar algo como "bloqueado" o escalarlo al senior:
