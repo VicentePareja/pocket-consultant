@@ -9,6 +9,7 @@ description: Estándar de rigor para construir y defender números de consultor�
 Cada número presentado sale de la **data cruda del cliente** y se puede reproducir desde un **Excel de respaldo** hasta la celda. Las láminas anteriores (talleres, propuestas) se usan para **conciliar**, nunca como fuente.
 
 ## El Excel de respaldo
+- Vive en `03 Trabajo` del proyecto y lee la data cruda desde `01 Insumos`, que no se edita (skill `organizar-proyecto`).
 - Hoja `README`: propósito, lista de hojas, fuente exacta de cada una (archivo > hoja > columnas > filtros), supuestos, y tabla **"número presentado → hoja!celda"**.
 - Hojas `DATA_*`: extracto de la data usada (o agregado documentado si es muy grande).
 - Hojas `A1_…`, `A2_…`: un análisis por hoja, con **fórmulas** (SUMIFS, COUNTIFS) sobre las `DATA_*`, no valores pegados.

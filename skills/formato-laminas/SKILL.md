@@ -38,6 +38,7 @@ description: Estándar para crear o revisar láminas de consultoría en PowerPoi
 - Revisa que el total de la lámina de resumen calce con la suma de las palancas.
 - Busca en todo el deck cualquier cifra que cambió (por ejemplo, un porcentaje recalculado) y actualízala en todas sus apariciones: resumen ejecutivo, síntesis, anexos, guion.
 - **Cero placeholders vacíos.** Un placeholder sin texto muestra "Haga clic para agregar título" o "Inserte título" al abrir el archivo, y el PNG exportado **no lo muestra**, así que mirar las imágenes no basta. Corre `scripts/qa_pptx.ps1 -Path <carpeta>` antes de entregar (con `-Fix` borra los vacíos) y termina cada script de construcción con `Remove-EmptyPlaceholders $pres`.
+- La versión que se envía se guarda en `04 Entregables` como `AAAAMMDD - Nombre vN.pptx` y no se sobrescribe; los checkpoints de construcción quedan en `03 Trabajo`.
 - En un deck para el cliente no quedan marcas internas: franjas "A validar", "PRELIMINAR" de trabajo, referencias a hojas del Excel de respaldo.
 
 ## Construcción con PowerShell + PowerPoint COM

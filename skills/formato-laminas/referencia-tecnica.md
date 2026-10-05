@@ -27,4 +27,5 @@ Problemas reales encontrados y su solución.
 - Guarda los `.ps1` en **UTF-8 con BOM** si tienen tildes; sin BOM, PowerShell 5.1 los lee como ANSI y las comparaciones de texto ("Mecánica/Eléctrica") fallan en silencio.
 - PowerShell no distingue mayúsculas: `$L` y `$l` son la misma variable (un ciclo `foreach($l …)` pisa un rango `$L`).
 - `?` es válido en nombres de variable: `"/sheets/$SID?include=…"` se rompe; usa `"/sheets/${SID}?include=…"`.
+- `$x | ConvertTo-Json` desenrolla un arreglo de un elemento y lo envía como objeto: usa `ConvertTo-Json -InputObject $x` cuando la API espera una lista.
 - Una función que devuelve un `DataReader` debe devolverlo con coma (`return ,$rd`) para que PowerShell no lo enumere.

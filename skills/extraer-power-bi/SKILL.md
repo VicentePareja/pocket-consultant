@@ -10,7 +10,7 @@ Un `.pbix` guarda los datos comprimidos dentro de un modelo (modo importación).
 
 ## Paso a paso (Windows)
 1. **Instala Power BI Desktop** (gratuito), con autorización del usuario: `winget install --id Microsoft.PowerBI -e`. Pide permisos de administrador.
-2. **Ejecuta `scripts/pbix_export.ps1 -Pbix <ruta> -Out <carpeta> -ListOnly`**: abre el archivo, espera a que levante el motor local (`msmdsrv`), se conecta con la librería AdomdClient que trae Power BI y lista las tablas con su número de filas.
+2. **Ejecuta `scripts/pbix_export.ps1 -Pbix <ruta> -Out <carpeta> -ListOnly`**. El `.pbix` queda en `01 Insumos` del proyecto y los CSV van a `03 Trabajo` (nunca al repo; ver skill `organizar-proyecto`): abre el archivo, espera a que levante el motor local (`msmdsrv`), se conecta con la librería AdomdClient que trae Power BI y lista las tablas con su número de filas.
 3. Revisa la lista: si las tablas tienen filas, los datos están adentro. Si al abrir pide credenciales o las tablas están vacías, el modelo es DirectQuery y ahí sí hace falta el cliente.
 4. **Ejecuta sin `-ListOnly`** para exportar todas las tablas a CSV (separador `;`, UTF-8). Unas 200 mil filas toman menos de un minuto.
 5. Cierra Power BI Desktop sin guardar.
