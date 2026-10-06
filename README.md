@@ -63,6 +63,7 @@ Un proyecto nuevo se crea con `scripts/nuevo-proyecto.ps1` (ver skill `organizar
 | `scripts/export_png.ps1` | Exporta láminas a PNG para revisión visual |
 | `scripts/config.ps1` | Lee claves y configuración desde el entorno o `~\.pocket-consultant\.env` (`Get-PcSetting`) |
 | `scripts/smartsheet.ps1` | Cliente mínimo de la API de Smartsheet; `New-PlanSheet` crea un plan de trabajo desde un JSON |
+| `scripts/preflight.ps1` | Verifica que git, gh, Vercel y Supabase apunten a la cuenta y al proyecto correctos antes de trabajar |
 | `scripts/nuevo-proyecto.ps1` | Crea la carpeta estándar de un proyecto con su ficha `README.md` |
 | `scripts/pbix_export.ps1` | Abre un .pbix en Power BI Desktop y exporta todas sus tablas a CSV |
 

@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(*vercel* --prod*)",
+      "Bash(*vercel* deploy --prod*)",
+      "Bash(*vercel* promote*)",
+      "Bash(*vercel* rollback*)",
+      "Bash(*vercel* env add*)",
+      "Bash(*vercel* env rm*)",
+      "Bash(*vercel* env update*)",
+      "Bash(*vercel* remove*)",
+      "Bash(*vercel* project rm*)",
+      "Bash(*vercel* domains*)",
+      "Bash(*supabase* db push*)",
+      "Bash(*supabase* db reset --linked*)",
+      "Bash(*supabase* link*)",
+      "Bash(*supabase* migration repair*)",
+      "Bash(*supabase* secrets set*)",
+      "Bash(*supabase* secrets unset*)",
+      "Bash(*supabase* projects delete*)",
+      "PowerShell(*vercel* --prod*)",
+      "PowerShell(*vercel* promote*)",
+      "PowerShell(*vercel* rollback*)",
+      "PowerShell(*vercel* env add*)",
+      "PowerShell(*vercel* env rm*)",
+      "PowerShell(*vercel* env update*)",
+      "PowerShell(*vercel* remove*)",
+      "PowerShell(*supabase* db push*)",
+      "PowerShell(*supabase* db reset --linked*)",
+      "PowerShell(*supabase* link*)",
+      "PowerShell(*supabase* secrets set*)",
+      "mcp__vercel-<proyecto>__deploy_to_vercel",
+      "mcp__plugin_vercel_vercel"
+    ]
+  }
+}
