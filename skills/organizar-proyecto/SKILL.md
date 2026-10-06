@@ -56,13 +56,14 @@ Si algo falla, no se trabaja hasta corregirlo. Formato de `identidades.json` (lo
   "vercel_project_id": "prj_...",
   "vercel_link_dir": ".",
   "supabase_ref": "<ref>",
+  "supabase_mcp": true,
   "supabase_read_only": true
 }
 ```
 
 - **Git:** `~/.gitconfig` aplica la identidad de la consultora a todo repo bajo `proyectos/` y redirige las URL de su organización a la llave SSH de trabajo.
 - **Vercel:** la sesión de trabajo vive en su propia carpeta (`~/.pocket-consultant/vercel-<org>`), separada de la personal; se usa con `--global-config` o un wrapper `~/.pocket-consultant/bin/vercel-<org>.cmd` que agrega `--global-config` y `--scope`.
-- **MCP:** se agregan con alcance local (`claude mcp add --scope local`) y fijos al proyecto: Supabase con `project_ref` y `read_only=true` si es producción, Vercel con la URL `/<equipo>/<proyecto>`.
+- **MCP:** solo si aportan algo que la CLI no cubre y la cuenta tiene el rol para autorizarlos (en Supabase, autorizar un MCP requiere rol Owner o Administrator de la organización; no se pide más rol solo para leer). Se agregan con alcance local (`claude mcp add --scope local`) y fijos al proyecto: Supabase con `project_ref` y `read_only=true` si es producción, Vercel con la URL `/<equipo>/<proyecto>`.
 - **Producción:** copia `plantillas/claude-settings-produccion.json` a `.claude/settings.local.json` del repo (ignorado por git): niega deploys a producción, cambios de variables y `supabase db push`/`link`. Claude solo lee producción.
 - Abre Claude Code **dentro del repo** para programar: así cargan su `CLAUDE.md`, sus permisos y sus MCP.
 

@@ -29,6 +29,9 @@
       "PowerShell(*supabase* db reset --linked*)",
       "PowerShell(*supabase* link*)",
       "PowerShell(*supabase* secrets set*)",
+      "Edit(**/.env)",
+      "Edit(**/.env.production)",
+      "Edit(**/.env.production.local)",
       "mcp__vercel-<proyecto>__deploy_to_vercel",
       "mcp__plugin_vercel_vercel"
     ]

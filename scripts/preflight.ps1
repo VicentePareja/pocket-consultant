@@ -38,17 +38,18 @@ if($c.vercel_team){
   } else { Write-Host "  --     proyecto aún no vinculado ($link)" -ForegroundColor Yellow }
 }
 
-if($c.supabase_ref){
-  Write-Host "Supabase (MCP de Claude Code)"
-  $cfg = Get-Content -Raw (Join-Path $HOME '.claude.json') | ConvertFrom-Json
+Write-Host "Supabase (MCP de Claude Code)"
+$cfg = Get-Content -Raw (Join-Path $HOME '.claude.json') | ConvertFrom-Json
+# Solo si el proyecto usa un MCP de Supabase: debe estar fijo a su proyecto (y en solo lectura si aplica).
+if($c.supabase_mcp){
   $proj = $cfg.projects.PSObject.Properties | Where-Object { $_.Name -replace '\\','/' -eq ($repo -replace '\\','/') } | Select-Object -First 1
   $urls = @($proj.Value.mcpServers.PSObject.Properties | ForEach-Object { $_.Value.url } | Where-Object { $_ -match 'supabase' })
   $ok = $urls.Count -gt 0 -and @($urls | Where-Object { $_ -notmatch "project_ref=$($c.supabase_ref)" -or ($c.supabase_read_only -and $_ -notmatch 'read_only=true') }).Count -eq 0
   Check 'MCP fijo al proyecto (y solo lectura si aplica)' 'si' $(if($ok){'si'}else{"no: $($urls -join ', ')"})
-  # Un MCP de Supabase global sin project_ref daría acceso a todos los proyectos de la cuenta.
-  $globales = @($cfg.mcpServers.PSObject.Properties | ForEach-Object { $_.Value.url } | Where-Object { $_ -match 'supabase' -and $_ -notmatch 'project_ref=' })
-  Check 'sin MCP de Supabase global sin fijar' 'ninguno' $(if($globales.Count){ $globales -join ', ' } else { 'ninguno' })
 }
+# Siempre: un MCP de Supabase global sin project_ref daría acceso a todos los proyectos de la cuenta.
+$globales = @($cfg.mcpServers.PSObject.Properties | ForEach-Object { $_.Value.url } | Where-Object { $_ -match 'supabase' -and $_ -notmatch 'project_ref=' })
+Check 'sin MCP de Supabase global sin fijar' 'ninguno' $(if($globales.Count){ $globales -join ', ' } else { 'ninguno' })
 
 if($fallas){ Write-Host "`n$fallas chequeo(s) fallaron. No trabajes hasta corregirlos." -ForegroundColor Red; exit 1 }
 Write-Host "`nTodo apunta a la cuenta y al proyecto correctos." -ForegroundColor Green
